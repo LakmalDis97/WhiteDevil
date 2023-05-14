@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Calculator</title>
+    
+    <style>  
+        /* Add a background image to the body */
+        body {
+            background-image: url('https://media.tenor.com/TkovuSbrET4AAAAS/neon-red.gif');
+            background-size: cover;
+            background-position: center center;
+        }
+
+        /* Set the font size of all text to 40 pixels */
+        body {
+            font-size: 40px;
+        }
+        
+        /* Increase the font size of the h1 heading to 80 pixels */
+        h1 {
+            font-size: 80px;
+            color: white;
+        }
+        
+        /* Increase the font size of the h3 heading to 50 pixels */
+        h3 {
+            font-size: 50px;
+            color: white;
+        }
+        
+        /* Increase the font size of the input fields and button to 50 pixels */
+        input[type="text"], input[type="button"] {
+            font-size: 50px;
+        }
+        
+        /* Increase the font size of the result text to 50 pixels */
+        #result {
+            font-size: 50px;
+            color: white;
+        }
+
+        /* Change the color of the input labels */
+        label[for="firstNumber"], label[for="secondNumber"] {
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Multiplication Calculator</h1>
+        <h3>Lets Multiply</h3>
+        <form>
+            <label for="firstNumber">1st Number :</label> <input type="text" id="firstNumber" /><br>
+            <label for="secondNumber">2nd Number:</label> <input type="text" id="secondNumber" /><br>
+            <input type="button" onClick="multiplyBy()" Value="Multiply" /><br>
+        </form>
+
+        <p style="color: white;">The Result is : <br>
+            <span id="result"></span>
+        </p>
+
+
+        <script>
+            function multiplyBy()
+            {
+            num1 = document.getElementById(
+                "firstNumber").value;
+            num2 = document.getElementById(
+                "secondNumber").value;
+            document.getElementById(
+                "result").innerHTML = num1 * num2;
+            }
+        </script>
+    </div>
+</body>
+</html>
